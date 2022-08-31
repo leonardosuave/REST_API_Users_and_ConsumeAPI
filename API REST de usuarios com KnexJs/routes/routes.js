@@ -11,9 +11,9 @@ route.get('/', HomeController.index);
 //User
 route.post('/user', UserController.create)
 route.get('/users', Auth.auth, UserController.allUsers)
-route.get('/user/:id', UserController.userById)
-route.put('/user', UserController.edit)
-route.delete('/user/:id', UserController.delete)
+route.get('/user/:id', Auth.auth, UserController.userById)
+route.put('/user', Auth.auth, UserController.edit)
+route.delete('/user/:id', Auth.auth, UserController.delete)
 
 //Change Password
 route.post('/recoverpassword', UserController.recoverPassword)
