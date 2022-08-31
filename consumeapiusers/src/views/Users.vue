@@ -23,7 +23,9 @@
               <td v-if="user.role == 0">Usuário comum</td>
               <td v-else-if="user.role == 1">Admin</td>
               <td>
-                <button class="button is-success">Editar</button> | 
+                <!--Link entre painel administrativo e edição do usuário-->
+                <router-link :to="{name: 'UserEdit', params: {id: user.id}}"><button class="button is-success">Editar</button></router-link> |
+
                 <button class="button is-danger" @click="showModalUser(user.id)">Deletar</button>
               </td>
             </tr>
@@ -54,7 +56,7 @@
               </div>
 
             </div>
-          <button class="modal-close is-large" aria-label="close" @click="hideModal"></button>
+          <button class="modal-close is-large" aria-label="close" @click="hideModal()"></button>
         </div>
 
       </div> 

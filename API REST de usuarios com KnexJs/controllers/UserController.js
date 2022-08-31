@@ -49,7 +49,6 @@ exports.userById = async (req, res) => {
             res.status(200)
             res.json(user)
         }
-        
 
     }catch(err) {
         console.log(err)
