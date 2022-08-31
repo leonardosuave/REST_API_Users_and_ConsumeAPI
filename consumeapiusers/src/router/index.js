@@ -15,7 +15,6 @@ function AdminAuth(to, from, next) {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }
     }
-    console.log(req)
 
     //Quando for post deve passar um dado -> {} antes do req
     axios.post('http://localhost:3333/validate', {}, req).then(res => {
