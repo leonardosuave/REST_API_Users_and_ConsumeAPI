@@ -152,12 +152,12 @@ exports.login = async (req, res) => {
             })
         } else {
             res.status(406)
-            res.json({status: 'Senha incorreta.'})
+            res.json({err: 'Senha incorreta.'})
             return
         }   
     } else {
         res.status(406)
-        res.send('Este e-mail não está cadastrado no sistema.')
+        res.send({err: 'Este e-mail não está cadastrado no sistema.'})
     }
 
 }

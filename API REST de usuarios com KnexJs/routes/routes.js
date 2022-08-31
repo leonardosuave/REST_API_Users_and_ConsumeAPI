@@ -22,4 +22,7 @@ route.post('/changepassword', UserController.changePassword)
 //Login
 route.post('/login', UserController.login)
 
+//Valida token do localstorage no consumo da api
+route.post('/validate', Auth.auth, HomeController.validate)
+
 module.exports = route;
