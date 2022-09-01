@@ -24,6 +24,7 @@
               <td v-else-if="user.role == 1">Admin</td>
               <td>
                 <!--Link entre painel administrativo e edição do usuário-->
+                <!--Vai redirecionar para a rota com nome UserEdit e passar o params-->
                 <router-link :to="{name: 'UserEdit', params: {id: user.id}}"><button class="button is-success">Editar</button></router-link> |
 
                 <button class="button is-danger" @click="showModalUser(user.id)">Deletar</button>
