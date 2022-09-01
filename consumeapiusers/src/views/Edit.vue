@@ -60,9 +60,7 @@ export default {
             name: '',
             email: '',
             id: -1,
-            nameEdit: '',
-            emailEdit: '',
-
+            
             //Vai receber msg de erro caso exista
             error: undefined  
         }
